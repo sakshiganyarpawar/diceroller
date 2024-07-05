@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Roller </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roller</title>
     <style>
-        
+        .game{
+        height: 600px;
+        width: 600px;
+        background-image: url("background.png");
+        background-size:cover;
+        margin: 30px auto;
+        border-radius: 30px;
+        position: relative;  
+        }
+      .container {
+        height: 250px;
+        width: 300px;
+        margin: 30px auto;
+        border-radius: 30px;
+        position: absolute;
+        background-color: #94f069;
+        top: 450px;
+        left: 250px;
+      }
+      .img {
+        margin: 30px 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      
+      .btn{
+        width:150px ;
+        height: 30px;
+        margin:5px 80px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 2px solid rgb(94, 181, 13);
+        background-color:#94f069;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 2px rgb(138, 136, 136);
+        cursor: pointer;
+      }
     </style>
-</head>
-    <body>
-       <div class="container"><img src="dice.jpg" alt="dice" id="dice" class="img" /></div> 
-        <br> <br>
-        <button type="button" onclick="rollDice()">Roll The Dice</button>
-        <script>
-            const diceImg = document.getElementById("dice");
-            function rollDice() {
-                const min = 1;
-                const max = 7;
-                const randomNumber = Math.floor(Math.random() * (max - min)) + min;
-                if (randomNumber == 1) {
-                    diceImg.src = "one.png";
-                }
-                else if (randomNumber == 2) {
-                    diceImg.src = "two.png";
-                }
-                else if (randomNumber == 3) {
-                    diceImg.src = "three.png";
-                }
-                else if (randomNumber == 4) {
-                    diceImg.src = "four.png";
-                }
-                else if (randomNumber == 5) {
-                    diceImg.src = "five.png";
-                }
-                else {
-                    diceImg.src = "six.png";
-                }
-            }
-        </script>    
-</body>
-
+  </head>
+  <body>
+    <div class="game">
+      <img src="image.png" class="token"/>
+    </div>
+    <div class="container">
+      <img src="dice.jpg" alt="dice" id="dice" class="img" />
+    <button type="button" onclick="rollDice()" class="btn">Roll The Dice</button>
+</div>
+    <script>
+      const diceImg = document.getElementById("dice");
+      function rollDice() {
+        const min = 1;
+        const max = 7;
+        const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        if (randomNumber == 1) {
+          diceImg.src = "one.png";
+        } else if (randomNumber == 2) {
+          diceImg.src = "two.png";
+        } else if (randomNumber == 3) {
+          diceImg.src = "three.png";
+        } else if (randomNumber == 4) {
+          diceImg.src = "four.png";
+        } else if (randomNumber == 5) {
+          diceImg.src = "five.png";
+        } else {
+          diceImg.src = "six.png";
+        }
+      }
+    </script>
+  </body>
 </html>
