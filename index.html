@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Roller</title>
     <style>
+      .heading{
+        margin-left:150px;
+        font-size: 40px;
+        font-weight: 700;
+        font-family:cursive;
+        color: navy;
+        margin-bottom: 5px;
+      }
         .game{
         height: 600px;
         width: 600px;
         background-image: url("background.png");
         background-size:cover;
-        margin: 30px auto;
+        margin: 10px auto;
         border-radius: 30px;
         position: relative;  
         }
       .container {
-        height: 250px;
-        width: 300px;
+        height: 230px;
+        width: 270px;
         margin: 30px auto;
         border-radius: 30px;
         position: absolute;
-        background-color: #94f069;
+        background-color: #3c9eda;
         top: 450px;
         left: 250px;
       }
@@ -29,7 +37,11 @@
         height: 100px;
         object-fit: cover;
       }
-      
+      .token{
+        width: 42px;
+        margin-left: 65px;
+        margin-top:135px ;
+      }
       .btn{
         width:150px ;
         height: 30px;
@@ -41,14 +53,22 @@
         box-shadow: 2px 2px 5px 2px rgb(138, 136, 136);
         cursor: pointer;
       }
+      .girl{
+        height: 100px;
+       position: absolute;
+       left: 5px;
+       top: 100px;
+      }
     </style>
   </head>
   <body>
+    <h1 class="heading">Roll Dice...</h1>
     <div class="game">
-      <img src="image.png" class="token"/>
+      <img src="token1.png" class="token"/>
     </div>
     <div class="container">
       <img src="dice.jpg" alt="dice" id="dice" class="img" />
+      <img src="girl1.jpeg" class="girl"/>
     <button type="button" onclick="rollDice()" class="btn">Roll The Dice</button>
 </div>
     <script>
